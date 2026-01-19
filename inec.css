@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 21px;
+    border: 1px solid black;
+    /* border-bottom: unset; */
+    margin-bottom: unset;
+}
+.note {
+    color: white;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 98px;
+    background-color: green
+}
+header img {
+    height: 110px;
+    width: 137px;
+}
+#Vbox {
+    display: none;
+}
+header h1 {
+    font-size: 24px;
+    font-family: sans-serif;
+}
+header p {
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.Top { grid-area: Top; }
+.Lside { grid-area: Lside; }
+.Rside { grid-area: Rside; }
+.SLside { grid-area: SLside; }
+.SRside { grid-area: SRside; }
+.Personalinfo {
+    display: grid;
+    /* border: 1px solid black; */
+    /* grid-template-columns: auto;
+    grid-template-rows: 50% 50%; */
+    grid-template-areas: 'Top Top' 
+                         'Lside Rside'
+                         'SLside SRside' ;
+    gap: 15px;
+}
+form {
+    margin: 0 9px 9px 9px;
+    /* border: 0 3px 0 1px solid black; */
+}
+form p {
+    font-size: 21px;
+    padding: 10px 0 5px 0;
+}
+label {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+#PersonalInfo {
+    width: 90%;
+    height: 25px;
+}
+#DOB {
+    width: 95%;
+    height: 20px;
+}
+input {
+    margin-top: 5px;
+}
+#localgov {
+    width: 95%;
+    height: 20px;
+}
+select {
+    width: 95%;
+    height: 20px;
+}
+.Rside label {
+    font-weight: unset;
+}
+.Rside :first-child {
+    font-weight: 600;
+}
+.down input {
+    width: 98%;
+    height: 25px;
+    margin-top: 9px;
+}
+.down ::placeholder {
+    padding: 11px;
+}
+#PersonalInfo::placeholder {
+    padding: 5px;
+}
+.check {
+    font-size: 15px;
+    margin-top: 7px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    /* background-color: aquamarine; */
+}
+.captcha button {
+    height: 45px;
+    width: 160px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 5px;
+    border-style: solid;
+}
+.captcha i {
+    font-size: 23px;
+    padding-left: 11px;
+}
+.submit button {
+    height: 35px;
+    width: 180px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(5, 82, 5);
+    border: unset;
+    border-radius: 3px;
+}
+.reset button {
+    height: 30px;
+    width: 120px;
+    margin-left: 45px;
+}
+@media screen and (min-width: 600px) {
+   body {
+    margin: 35px 35px 0 35px;
+   }
+   .check {
+    font-size: 18px;
+   }
+}
+@media screen and (min-width: 800px) {
+    body {
+        border-bottom: 1px solid black;
+    }
+    .Personalinfo {grid-area: left;}
+    .identityverification { grid-area: right;}
+    
+    .personIden {
+        display: grid;
+        grid-template-areas: 'left right' 'left right';
+    }
+    header {
+        height: 130px
+    }
+    header img {
+        height: 150px;
+        width: 170px;
+    }
+    #Vbox {
+        display: inline;
+    }
+    header h1 {
+        font-size: 34px;
+    }
+    header p {
+        font-size: 20px;
+    }
+    #nin {
+        width: 67%;
+    }
+    .check {
+        font-size: 21px;
+    }
+    .buttons {
+        justify-content: space-evenly;
+    }
+    .submit button {
+        height: 37px;
+        width: 190px;
+    }
+}
+@media screen and (min-width: 960px) {
+    form {
+        margin: 0 20px 11px 20px;
+    }
+}
+@media (min-width: 1200px) {
+    form {
+        margin: 0 25px 11px 25px;
+    }
+}

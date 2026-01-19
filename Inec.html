@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="inec.js"></script>
+    <link rel="stylesheet" href="inec.css" type="text/css">
+    <link rel="stylesheet" href="font/css/all.css" type="text/css">
+    <link rel="icon" href="images/PER.png" type="image/x-icon">
+    <title>INEC</title>
+</head>
+<body>
+    <header>
+        <img src="images/flag.png" alt="Nigerian flag">
+        <div class="note">
+            <h1>REGISTER TO VOTE</h1>
+            <p>Independent National Electoral Commision</p>
+        </div>
+        <img src="images/Vbox (2).png" alt="Vallot box" id="Vbox">
+    </header>
+    <main>
+       <form action="post" name="Inecform">
+        <div class="personIden">
+           <div class="Personalinfo">
+               <div class="Top">
+                  <p>
+                   <i class="fa-solid fa-user"></i>
+                   Personal Information
+                  </p>
+                 <input type="text" id="PersonalInfo" name="Personalinfo" placeholder="Full Name" required>
+              </div>
+              <div class="Lside">
+                <label for="DOB">Date Of Birth</label> <br>
+                 <input type="date" name="DOB" id="DOB">
+              </div>
+              <div class="Rside">
+                 <label for="Gender">Gender</label> <br>
+                 <input type="radio" id="male" name="gender" value="Male">
+                 <label for="male">Male</label>
+                 <input type="radio" id="female" name="gender" value="Female">
+                 <label for="female">Female</label>
+                 <input type="radio" id="other" name="gender" value="Other">
+                 <label for="other">Other</label>
+               </div>
+               <div class="SLside">  
+                 <label for="stateoforigin">State Of Origin</label><br>
+                 <select name="state" id="stateoforigin">
+                   <option value="Kano">Kano</option>
+                 </select>
+              </div>
+              <div class="SRside">
+                 <label for="localgov">Local Government Area</label><br>
+                 <input type="text" name="localgov" id="localgov">
+              </div>
+           </div>
+           <div class="identityverification">
+            <div class="top">
+                <p>
+                    <i class="fa fa-user-check"></i>
+                    Identity Verification
+                </p>
+            </div>
+            <div class="down">
+                <input type="text" name="address" id="address" autocomplete="address-level1" placeholder="Address" required><br>
+                <input type="tel" name="number" id="number" placeholder="090-4818-3055" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br>
+                <input type="email" name="email" id="email" placeholder="Email Address" >
+            </div>
+           </div>
+        </div>
+           <div class="idcard">
+            <div class="top">
+                <p>
+                    <i class="fa fa-id-card"></i>
+                    Document Verification
+                </p>
+            </div>
+            <div class="down">
+                <input type="number" name="nin" id="nin" placeholder="National Identification Number" required>
+                <input type="file" name="Idcard" id="Idcard" placeholder="Upload ID Document: Nin, Passport, D.license">
+                <div class="reset">
+                   <button type="reset">
+                       Clear Form
+                   </button>
+                </div>
+                <p class="check">
+                    <i class="fa fa-circle-check"></i>
+                    I've confirm, that I'm a Nigerian citizen and at least 18 Years old.
+                </p>
+            </div>
+           </div>
+           <div class="buttons">
+            <div class="captcha">
+                <button type="button">
+                    <i class="fa-regular fa-square"></i>
+                    I'm not a robot
+                </button>
+            </div>
+            <div class="submit">
+                <button type="submit">
+                    SUBMIT REGISTRATION
+                </button>
+            </div>
+           </div>
+       </form>
+    </main>
+</body>
+</html>
