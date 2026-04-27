@@ -2,14 +2,21 @@
     padding: 0;
     margin: 0;
 }
-body {
+.inec-foam {
     margin: 21px;
-    border: 1px solid black;
+    border: 1px solid #000000;
     /* border-bottom: unset; */
     margin-bottom: unset;
+    margin-top: unset;
 }
 .note {
     color: white;
+}
+#message {
+    font-size: 16px;
+    font-family: monospace;
+    text-align: center;
+    padding: 7px;
 }
 header {
     display: flex;
@@ -146,6 +153,9 @@ select {
    .check {
     font-size: 18px;
    }
+   #message {
+    font-size: 18px;
+   }
 }
 @media screen and (min-width: 800px) {
     body {
@@ -157,6 +167,9 @@ select {
     .personIden {
         display: grid;
         grid-template-areas: 'left right' 'left right';
+    }
+    #message {
+        font-size: 21px;
     }
     header {
         height: 130px
@@ -192,9 +205,15 @@ select {
     form {
         margin: 0 20px 11px 20px;
     }
+    #message {
+        font-size: 24px;
+    }
 }
 @media (min-width: 1200px) {
     form {
         margin: 0 25px 11px 25px;
+    }
+    #message {
+        font-size: 27px;
     }
 }

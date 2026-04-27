@@ -18,3 +18,6 @@ else {
     alert("Sorry " + user + " this is mainly for nigerian Indegine");
     document.body.innerHTML = "Sorry " + user + " <h1>YOU ARE NOT AN INDEGINE !.</h1>" ;
 }
+let greetings = () => "Hi, " + user.toUpperCase() + " welcome to INEC registration portal." ;
+const greet = greetings();
+document.querySelector("#message").innerHTML = greet;
