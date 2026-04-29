@@ -15,7 +15,7 @@ const upload = multer({ storage: storage });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve static files from 'public' directory
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Initialize database table (Postgres syntax)
 async function initDb() {
@@ -67,7 +67,7 @@ app.post('/register', upload.single('Idcard'), async (req, res) => {
         }
 
         // 2. Verify with Google's API
-        const secretKey = '6LeHqtAsAAAAAM7laYx_ZWqE3LuYEyLQjcLTbcam'; // Keep this hardcoded for now, or use process.env.RECAPTCHA_SECRET_KEY
+        const secretKey = process.env.RECAPTCHA_SECRET_KEY || '6LeHqtAsAAAAAM7laYx_ZWqE3LuYEyLQjcLTbcam';
         const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaResponse}`;
 
         const captchaFetch = await fetch(verifyUrl, { method: 'POST' });
@@ -82,7 +82,7 @@ app.post('/register', upload.single('Idcard'), async (req, res) => {
         if (req.file) {
             const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
             const filename = `idcards/${uniqueSuffix}${path.extname(req.file.originalname)}`;
-            
+
             // Upload the memory buffer to Vercel Blob
             const blob = await put(filename, req.file.buffer, {
                 access: 'public',
