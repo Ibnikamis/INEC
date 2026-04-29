@@ -4,6 +4,7 @@
   "description": "Checking\r Last for today\r Modified my Inec.js",
   "main": "inec.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +20,9 @@
   },
   "homepage": "https://github.com/Ibnikamis/INEC#readme",
   "dependencies": {
+    "@vercel/blob": "^2.3.3",
+    "@vercel/postgres": "^0.10.0",
     "express": "^5.2.1",
-    "multer": "^2.1.1",
-    "sqlite3": "^6.0.1"
+    "multer": "^2.1.1"
   }
 }
