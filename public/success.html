@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful - INEC</title>
+    <link rel="stylesheet" href="inec.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome-free-7.2.0-web/css/all.css" type="text/css">
+    <link rel="icon" href="images/PER.png" type="image/x-icon">
+    <style>
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .success-icon {
+            font-size: 80px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .success-container h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .success-container p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .btn-home {
+            background-color: #2e8b57;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-home:hover {
+            background-color: #21663f;
+        }
+    </style>
+</head>
+<body>
+    <div class="inec-foam" style="display: block;">
+        <header>
+            <img src="images/flag.png" alt="Nigerian flag">
+            <div class="note">
+                <h1>REGISTER TO VOTE</h1>
+                <p>Independent National Electoral Commision</p>
+            </div>
+            <img src="images/Vbox (2).png" alt="Vallot box" id="Vbox">
+        </header>
+        <main>
+            <div class="success-container">
+                <i class="fa-solid fa-circle-check success-icon"></i>
+                <h1>Registration Successful!</h1>
+                <p>Your registration details have been submitted and saved securely. Thank you for registering to vote.</p>
+                <a href="/" class="btn-home">Return to Home</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

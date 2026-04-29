@@ -1,0 +1,26 @@
+{
+  "name": "inec",
+  "version": "1.0.0",
+  "description": "Checking\r Last for today\r Modified my Inec.js",
+  "main": "inec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ibnikamis/INEC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ibnikamis/INEC/issues"
+  },
+  "homepage": "https://github.com/Ibnikamis/INEC#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "sqlite3": "^6.0.1"
+  }
+}
